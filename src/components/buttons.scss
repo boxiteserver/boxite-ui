@@ -1,0 +1,40 @@
+@use '../colours';
+@use '../variables';
+
+.button {
+  padding: variables.$padding-sm variables.$padding-md;
+  border-radius: variables.$radius;
+  background-color: colours.$light;
+  color: colours.$dark;
+
+  display: inline-block;
+  outline: none;
+  border: none;
+
+  margin: 0;
+
+  transition: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform .2s ease;
+
+  font-size: 16px;
+  font-weight: variables.$weight-semibold;
+
+  &:hover {
+    background-color: darken(colours.$light, 4%);
+    cursor: pointer;
+  }
+
+  @each $name, $args in colours.$colours {
+    $colour: nth($args, 1);
+    $colour-text: nth($args, 2);
+
+    &.is-#{$name} {
+      background-color: $colour;
+      color: $colour-text;
+      border-color: darken($colour, 3%);
+    }
+
+    &.is-#{$name}:hover {
+      background-color: darken($colour, 4%);
+    }
+  }
+}
