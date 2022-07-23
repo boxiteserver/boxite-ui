@@ -1,0 +1,45 @@
+// Colours
+
+$primary: hsl(316, 94%, 51%) !default;
+$info: hsl(207, 61%,  53%) !default;
+$success: hsl(153, 53%,  53%) !default;
+$warning: hsl(44,  100%, 77%) !default;
+$danger: hsl(348, 86%, 61%) !default;
+
+$white: hsl(0, 0%, 100%) !default;
+$black: hsl(0, 0%, 0%) !default;
+
+// Derived
+
+$light: lighten($primary, 45%) !default;
+$dark: darken($primary, 30%) !default;
+
+// Text
+
+$primary-text: $light;
+$info-text: $white;
+$success-text: $white;
+$warning-text: $black;
+$danger-text: $white;
+
+$white-text: $black;
+$black-text: $white;
+
+$light-text: $dark;
+$dark-text: $light;
+
+// Total
+
+$colours: (
+        "primary": ($primary, $primary-text),
+        "info": ($info, $info-text),
+        "success": ($success, $success-text),
+        "warning": ($warning, $warning-text),
+        "danger": ($danger, $danger-text),
+
+        "white": ($white, $white-text),
+        "black": ($black, $black-text),
+
+        "light": ($light, $light-text),
+        "dark": ($dark, $dark-text)
+)
