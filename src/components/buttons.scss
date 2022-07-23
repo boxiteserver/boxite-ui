@@ -30,7 +30,6 @@
     &.is-#{$name} {
       background-color: $colour;
       color: $colour-text;
-      border-color: darken($colour, 3%);
     }
 
     &.is-#{$name}:hover {
